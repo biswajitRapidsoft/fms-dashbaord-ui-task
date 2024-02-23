@@ -1,2 +1,2 @@
-# fms-dashbaord-ui-task
-FMS default dashboard and fuel dashboard task
+# fms-ui-task
+fms-ui-task-for-trainees
