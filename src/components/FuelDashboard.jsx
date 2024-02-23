@@ -994,7 +994,7 @@ const FuelDashboard = () => {
                     </label>
                   </div>
                 </Box>
-                <Box sx={{ backgroundColor: "", mr: 1 }}>
+                <Box sx={{ backgroundColor: "", mr: 1, mt: 0.5 }}>
                   <Button
                     sx={{
                       backgroundColor: "#47217a",
