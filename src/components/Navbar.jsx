@@ -25,6 +25,7 @@ const Navbar = () => {
         background:
           "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(95,59,143,1) 100%)",
         height: "3.39em",
+        // height: "4.39em",
       }}
     >
       <Toolbar disableGutters>

@@ -26,6 +26,85 @@ import AltRouteIcon from "@mui/icons-material/AltRoute";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import LocalGasStationIcon from "@mui/icons-material/LocalGasStation";
 
+// table testing
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+
+function createData(name, calories, fat, carbs, protein) {
+  return { name, calories, fat, carbs, protein };
+}
+
+const rows = [
+  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
+  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
+  createData("Eclair", 262, 16.0, 24, 6.0),
+  createData("Cupcake", 305, 3.7, 67, 4.3),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+];
+
 const Dashboard = () => {
   const top5GasStation = ["Bharat Petroleum", "HP", "Reliance", "Indian Oil"];
 
@@ -51,13 +130,14 @@ const Dashboard = () => {
           }}
         >
           {/* each list inside transporter box */}
-          <Box sx={{ display: "flex", gap: "2rem" }}>
+          <Box sx={{ display: "flex", gap: "1rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#318CE7",
-                width: "10%",
+                // width: "10%",
+                width: "3rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -79,13 +159,13 @@ const Dashboard = () => {
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ display: "flex", gap: "2rem" }}>
+          <Box sx={{ display: "flex", gap: "1rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#318CE7",
-                width: "10%",
+                width: "3rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -100,20 +180,20 @@ const Dashboard = () => {
               }}
             >
               <Typography sx={{ fontWeight: "550" }}>
-                Total Transporters
+                Total Registered Vehicles
               </Typography>
               <Typography sx={{ color: "blue" }} component={Link}>
-                0
+                695
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ display: "flex", gap: "2rem" }}>
+          <Box sx={{ display: "flex", gap: "1rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#318CE7",
-                width: "10%",
+                width: "3rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -128,20 +208,20 @@ const Dashboard = () => {
               }}
             >
               <Typography sx={{ fontWeight: "550" }}>
-                Total Transporters
+                Total Installations Done
               </Typography>
               <Typography sx={{ color: "green" }} component={Link}>
-                0
+                687
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ display: "flex", gap: "2rem" }}>
+          <Box sx={{ display: "flex", gap: "1rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#318CE7",
-                width: "10%",
+                width: "3rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -156,20 +236,20 @@ const Dashboard = () => {
               }}
             >
               <Typography sx={{ fontWeight: "550" }}>
-                Total Transporters
+                Total Installations Pending
               </Typography>
               <Typography sx={{ color: "red" }} component={Link}>
-                0
+                8
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ display: "flex", gap: "2rem" }}>
+          <Box sx={{ display: "flex", gap: "1rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#318CE7",
-                width: "10%",
+                width: "3rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -184,20 +264,20 @@ const Dashboard = () => {
               }}
             >
               <Typography sx={{ fontWeight: "550" }}>
-                Total Transporters
+                Vehicles in Network
               </Typography>
               <Typography sx={{ color: "green" }} component={Link}>
-                0
+                407
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ display: "flex", gap: "2rem" }}>
+          <Box sx={{ display: "flex", gap: "1rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#318CE7",
-                width: "10%",
+                width: "3rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -212,10 +292,10 @@ const Dashboard = () => {
               }}
             >
               <Typography sx={{ fontWeight: "550" }}>
-                Total Transporters
+                Vehicles out of Network
               </Typography>
               <Typography sx={{ color: "red" }} component={Link}>
-                0
+                280
               </Typography>
             </Box>
           </Box>
@@ -225,7 +305,8 @@ const Dashboard = () => {
         <Box
           sx={{
             width: "100%",
-            backgroundColor: "#90EE90",
+            // backgroundColor: "#90EE90",
+            backgroundColor: "rgba(144, 238, 144, 0.5)",
             borderRadius: "0.3rem",
             marginTop: "0.4rem",
             padding: "0.4rem",
@@ -251,13 +332,13 @@ const Dashboard = () => {
             border: "1px solid black",
           }}
         >
-          <Box sx={{ display: "flex", gap: "2rem", marginLeft: "0.25rem" }}>
+          <Box sx={{ display: "flex", gap: "1rem", marginLeft: "0.25rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#318CE7",
-                width: "10%",
+                width: "3rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -279,7 +360,13 @@ const Dashboard = () => {
           </Box>
 
           {/* table inside trips box */}
-          <Grid container sx={{ width: "100%", backgroundColor: "#90EE90" }}>
+          <Grid
+            container
+            sx={{
+              width: "100%",
+              // , backgroundColor: "#90EE90"
+            }}
+          >
             <Grid
               item
               xs={6}
@@ -367,7 +454,8 @@ const Dashboard = () => {
         <Box
           sx={{
             width: "100%",
-            backgroundColor: "#F67280",
+            // backgroundColor: "#F67280",
+            backgroundColor: "rgba(246, 114, 128, 0.6)",
             borderRadius: "0.3rem",
             marginTop: "0.4rem",
             padding: "0.4rem",
@@ -391,13 +479,15 @@ const Dashboard = () => {
             marginTop: "0.25rem",
           }}
         >
-          <Box sx={{ display: "flex", gap: "2rem" }}>
+          <Box sx={{ display: "flex", gap: "0.5rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#EE4B2B",
-                width: "10%",
+                width: "16%",
+                // width: "3rem",
+                // height: "3rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -435,13 +525,13 @@ const Dashboard = () => {
             marginTop: "0.25rem",
           }}
         >
-          <Box sx={{ display: "flex", gap: "2rem" }}>
+          <Box sx={{ display: "flex", gap: "0.5rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#EE4B2B",
-                width: "10%",
+                width: "16%",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -478,13 +568,13 @@ const Dashboard = () => {
             marginTop: "0.25rem",
           }}
         >
-          <Box sx={{ display: "flex", gap: "2rem" }}>
+          <Box sx={{ display: "flex", gap: "0.5rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#EE4B2B",
-                width: "10%",
+                width: "16%",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -521,13 +611,13 @@ const Dashboard = () => {
             marginTop: "0.25rem",
           }}
         >
-          <Box sx={{ display: "flex", gap: "2rem" }}>
+          <Box sx={{ display: "flex", gap: "0.5rem" }}>
             {/* icon */}
             <Box
               sx={{
                 border: "1px solid black",
                 bgcolor: "#EE4B2B",
-                width: "10%",
+                width: "16%",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -554,46 +644,161 @@ const Dashboard = () => {
       {/* middle parent box */}
       <Box
         sx={{
-          // backgroundColor: "green",
           width: "75%",
           display: "flex",
-          // justifyContent: "space-between",
-          paddingLeft: "4rem",
-          // gap: "2em",
+          paddingLeft: "0.75rem",
+          flexDirection: "column",
         }}
       >
-        <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={top5GasStation}
-          sx={{ width: 300 }}
-          size="small"
-          renderInput={(params) => (
-            <TextField {...params} label="Select site" />
-          )}
-        />
-        {/* container for mui checkbox */}
         <Box
-          // sx={{ border: "1px solid black" }}
-          sx={{ marginLeft: "2rem" }}
+          sx={{
+            display: "flex",
+            // alignItems: "center",
+            gap: "1rem",
+          }}
         >
-          {" "}
-          <FormControlLabel
-            label="Show Chainages Name"
-            control={<Checkbox defaultChecked />}
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={top5GasStation}
+            sx={{ width: 300 }}
+            size="small"
+            renderInput={(params) => (
+              <TextField {...params} label="Select site" />
+            )}
           />
-          <FormControlLabel
-            label="Show Mid Points"
-            control={<Checkbox defaultChecked />}
-          />
-          <FormControlLabel
-            label="Show Routes"
-            control={<Checkbox defaultChecked />}
-          />
-          <FormControlLabel
-            label="Show Vehicles"
-            control={<Checkbox defaultChecked />}
-          />
+          {/* container for mui checkbox */}
+          <Box
+            // sx={{ border: "1px solid black" }}
+            sx={{ marginLeft: "2rem" }}
+          >
+            {" "}
+            <FormControlLabel
+              label="Show Chainages Name"
+              control={<Checkbox defaultChecked />}
+            />
+            <FormControlLabel
+              label="Show Mid Points"
+              control={<Checkbox defaultChecked />}
+            />
+            <FormControlLabel
+              label="Show Routes"
+              control={<Checkbox defaultChecked />}
+            />
+            <FormControlLabel
+              label="Show Vehicles"
+              control={<Checkbox defaultChecked />}
+            />
+          </Box>
+        </Box>
+
+        {/* Box for table */}
+        <Box
+          sx={{
+            backgroundColor: "yellow",
+            // width: "100%",
+            // width: "500px",
+            width: "calc(100vw - 500px)",
+            // 335 +
+            overflowX: "auto",
+            border: "1px solid black",
+            marginRight: "1rem",
+            height: "450px",
+          }}
+        >
+          <TableContainer component={Paper}>
+            <Table aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Dessert (100g serving)</TableCell>
+                  <TableCell align="right">Calories</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell>Dessert (100g serving)</TableCell>
+                  <TableCell align="right">Calories</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell>Dessert (100g serving)</TableCell>
+                  <TableCell align="right">Calories</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow
+                    key={row.name}
+                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                    <TableCell align="right">{row.calories}</TableCell>
+                    <TableCell align="right">{row.fat}</TableCell>
+                    <TableCell align="right">{row.carbs}</TableCell>
+                    <TableCell align="right">{row.protein}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
         </Box>
       </Box>
 
@@ -623,7 +828,8 @@ const Dashboard = () => {
             right: 0,
             height: "80%",
             backgroundColor: "#d4d4d4",
-            width: "17rem",
+            // width: "17rem",
+            width: "20rem",
           }}
         >
           {/*Download option box*/}
@@ -637,7 +843,7 @@ const Dashboard = () => {
               alignItems: "center",
             }}
           >
-            <Typography sx={{ color: "white" }}>Vehcile List</Typography>
+            <Typography sx={{ color: "white" }}>Vehicle List</Typography>
             <Box
               sx={{
                 display: "flex",
@@ -657,6 +863,7 @@ const Dashboard = () => {
             </Box>
           </Box>
           <TextField
+            fullWidth
             id="outlined-basic"
             // label="Search"
             placeholder="search"
@@ -713,14 +920,40 @@ const Dashboard = () => {
                   }}
                 >
                   {/* All(687) */}
-                  <Typography>All(687)</Typography>
+                  <Typography sx={{ fontSize: "0.8rem", fontWeight: "600" }}>
+                    All(687)
+                  </Typography>
                 </Box>
               </Grid>
               <Grid item xs={4}>
                 <Box
                   sx={{
                     width: "100%",
-                    backgroundColor: "#90EE90",
+                    // backgroundColor: "#90EE90",
+                    backgroundColor: "rgba(144, 238, 144, 0.5)",
+
+                    borderRadius: "0.4rem",
+                    height: "2.5rem",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    // wordWrap:
+                  }}
+                >
+                  {/* <Typography> All(345)</Typography> */}
+                  <Typography sx={{ fontSize: "0.7rem", fontWeight: "600" }}>
+                    {" "}
+                    In Network <br />
+                    (345)
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={4}>
+                <Box
+                  sx={{
+                    width: "100%",
+                    // backgroundColor: "#F67280",
+                    backgroundColor: "rgba(246, 114, 128, 0.6)",
                     borderRadius: "0.4rem",
                     height: "2.5rem",
                     display: "flex",
@@ -728,24 +961,13 @@ const Dashboard = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Typography> All(345)</Typography>
-                  {/* <Typography> In Network(345)</Typography> */}
-                </Box>
-              </Grid>
-              <Grid item xs={4}>
-                <Box
-                  sx={{
-                    width: "100%",
-                    backgroundColor: "#F67280",
-                    borderRadius: "0.4rem",
-                    height: "2.5rem",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Typography> All(345)</Typography>
-                  {/* <Typography> Out of Network(345)</Typography> */}
+                  {/* <Typography> All(345)</Typography> */}
+                  <Typography sx={{ fontSize: "0.7rem", fontWeight: "600" }}>
+                    {" "}
+                    Out of Network
+                    <br />
+                    (345)
+                  </Typography>
                 </Box>
               </Grid>
             </Grid>
@@ -765,8 +987,11 @@ const Dashboard = () => {
             <Box
               sx={{
                 display: "flex",
-                backgroundColor: "#F67280",
+                // backgroundColor: "#F67280",
+                backgroundColor: "rgba(246, 114, 128, 0.6)",
+
                 padding: "0.7rem",
+                gap: "0.6rem",
               }}
             >
               <AltRouteIcon sx={{ color: "blue" }} />
@@ -780,8 +1005,11 @@ const Dashboard = () => {
             <Box
               sx={{
                 display: "flex",
-                backgroundColor: "#90EE90",
+                // backgroundColor: "#90EE90",
+                backgroundColor: "rgba(144, 238, 144, 0.5)",
+
                 padding: "0.7rem",
+                gap: "0.6rem",
               }}
             >
               <AltRouteIcon sx={{ color: "blue" }} />
@@ -795,8 +1023,11 @@ const Dashboard = () => {
             <Box
               sx={{
                 display: "flex",
-                backgroundColor: "#F67280",
+                // backgroundColor: "#F67280",
+                backgroundColor: "rgba(246, 114, 128, 0.6)",
+
                 padding: "0.7rem",
+                gap: "0.6rem",
               }}
             >
               <AltRouteIcon sx={{ color: "blue" }} />

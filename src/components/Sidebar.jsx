@@ -132,7 +132,7 @@ export default function Sidenav({ open: propOpen, onClose }) {
                   justifyContent: "center",
                 }}
               >
-                <LocalGasStationIcon sx={{ color: "yellow", ml: 1 }} />
+                <LocalGasStationIcon sx={{ color: "#89CFF0", ml: 1 }} />
               </ListItemIcon>
               <ListItemText
                 primary="Fuel dashboard"
@@ -145,4 +145,3 @@ export default function Sidenav({ open: propOpen, onClose }) {
     </Box>
   );
 }
-
