@@ -979,7 +979,7 @@ const FuelDashboard = () => {
                   justifyContent: "space-between",
                   backgroundColor: "",
                   // width: "100%",
-                  //   mt: 0.5,
+                  mt: 0.5,
                 }}
               >
                 <Box sx={{ display: "flex", flexDirection: "row" }}>
